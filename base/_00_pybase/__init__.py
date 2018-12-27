@@ -28,3 +28,5 @@ def settest1():
     shusu = [i for i in l if i == i]
     print(shusu)
     print(type(shusu))
+    
+print(8//2)

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="jquery"></script>
+		<script type="text/javascript">
+		var can_doan = true;
+		$(function(){
+			$('#q').bind('keyup', function(event) {
+		        if (event.keyCode == "13") {
+		            doan()
+		        }
+		    });
+			$('#send').click(function(){
+				doan()
+			});
+			
+		});
+		
+		function doan(){
+			var q = $("#q").val()
+			if(q == ''){
+				return;	
+			}
+			$.ajax({
+				url: "a/" ,
+				type: 'post',
+				dataType: 'html',
+				data:{
+					q:q
+				},
+				error: function(XMLHttpRequest, textStatus, errorThrown){
+					alert('错啦')
+				},
+				success: function(result){
+					$("#res").val(result)
+				}
+			});
+		}
+		
+		</script>
+	</head>
+	<body>
+	<div>enorth：it、体育、财经、汽车、教育、旅游、政民、文娱</div>
+	<div>输入：</div>
+	<textarea rows="25" cols="100" id='q'></textarea><button id='send'>发送</button>
+	<div>类型：</div>
+	<input id="res"></input>
+	<br><br>
+	</body>
+</html>

@@ -59,4 +59,28 @@ print('ndata1.reshape',ndata1.reshape(ndata1.shape[0],3,1))
 print('ndata1(0,0)',ndata1[0,0])
 
 data1 = [[2,3],[4,5]]
-print(data1 **2)
+print(data1 *2)
+
+#将一个列表a转换成相应的矩阵类型
+a = np.mat([[1, 3], [5, 7]])
+print('mat:',a)
+
+data2 = np.zeros((4,3))
+for i in range(3):
+    data2[:,i]=np.random.normal()
+print('data2:'+str(data2))
+
+#随机
+print('np.random.randn():',np.random.randn(2, 3))
+
+data3 = np.array([[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]])
+print('data3.reshape(-1):',data3.reshape(4,-1))
+
+data4=np.array([0,1,2,3,4,5])
+date4_1 = np.array([10,20,30,40,50,60])
+date4_1[data4]=-1
+print('date4_1:',date4_1)
+
+#第一个参数是开始，第二个参数是结束，第三个参数是步长
+print('np.arange:',np.arange(1,6.1))
+
