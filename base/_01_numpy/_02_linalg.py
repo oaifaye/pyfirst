@@ -30,4 +30,15 @@ x = np.array([[1, 6, 2,1,3], [1, 8, 1,1,5], [1, 10, 0,1,4], [1, 14, 2,1,3], [1, 
 b= np.array([[7], [9], [13], [17.5], [18]])
 print(np.linalg.lstsq(x, b))
 
-# print(help(np.linalg.lstsq))
+#特征向量特征值
+def testeig():
+    data = [
+            [1,1,1],
+            [2,2,2],
+            [3,3,3]
+            ]
+    eigVals,eigVects=np.linalg.eig(np.mat(data))
+    print('eigVals:',eigVals)
+    print('eigVects:',eigVects)
+
+testeig()

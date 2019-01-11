@@ -84,3 +84,17 @@ print('date4_1:',date4_1)
 #第一个参数是开始，第二个参数是结束，第三个参数是步长
 print('np.arange:',np.arange(1,6.1))
 
+data5=[[1,1,1,1],[1,10,100,100],[1,10,100,1000]]
+print('cov:',np.cov(data5))
+
+#堆叠数组（列式）
+data6=[[2,2,2,2],[2,20,200,200],[2,20,200,2000]]
+print('hstack',np.hstack((data5,data6)))
+#堆叠数组（行式）
+print('vstack',np.vstack((data5,data6)))
+print('stack',np.stack((data5,data6),axis=1))
+
+#np.newaxis 增加一个维度，常用于行向量转列向量
+print('data6,np.newaxis:\n',np.array(data6)[:,:,np.newaxis])
+data7 = [1,2,3,4,5,6]
+print('data7,np.newaxis:\n',np.array(data7)[:,np.newaxis])

@@ -24,6 +24,8 @@ reduce_sum = tf.reduce_sum(x)
 
 loss = -tf.log(0.97993505)
 
+print(help(tf.contrib.losses.absolute_difference ))
+
 init_op = tf.initialize_all_variables()
 with tf.Session() as sess:
     sess.run(init_op)

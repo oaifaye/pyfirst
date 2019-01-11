@@ -6,7 +6,7 @@ import random
 
 
 print('random.random():',random.random())             #产生0-1的随机浮点数
-print('random.uniform():',random.uniform(0,100))        #产生指定范围内的随机浮点数
+print('random.uniform():',random.uniform(0,1))        #产生指定范围内的随机浮点数
 print('random.randint():',random.randint(0,100))        #产生指定范围内的随机整数
 print('random.randrange():',random.randrange(0, 100, 2)) #从一个指定步长的集合中产生随机数,从0-100步长是2的数中随机，如2,4,6,8,10...
 print('random.choice():',random.choice('1234567890'))     #从序列中产生一个随机数
