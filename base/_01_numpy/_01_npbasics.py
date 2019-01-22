@@ -98,3 +98,9 @@ print('stack',np.stack((data5,data6),axis=1))
 print('data6,np.newaxis:\n',np.array(data6)[:,:,np.newaxis])
 data7 = [1,2,3,4,5,6]
 print('data7,np.newaxis:\n',np.array(data7)[:,np.newaxis])
+
+data8=[[[1,11],[2,22],[3,33]],[[4,44],[5,55],[6,66]]]
+print('data8[-1]:',data8[-1])
+
+#类型转换
+data8.astype(np.int32)
