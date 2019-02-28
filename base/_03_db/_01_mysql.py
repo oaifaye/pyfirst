@@ -7,3 +7,5 @@ rows = cursor.fetchall()
 for row in rows:
     print(row['news_id'])
 db.close()   
+
+

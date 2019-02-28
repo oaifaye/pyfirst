@@ -4,6 +4,7 @@ os和os.path模块的重要方法
 '''
 import os
 import stat
+import shutil
 
 print("---------------------os------------------------")
 # print('os.remove',os.remove('01/xx.txt'))                     #删除文件
@@ -65,3 +66,4 @@ print('os.path.splitdrive:',os.path.splitdrive(filename))        #一般用在wi
 # os.path.walk(path, visit, arg)  #遍历path，给每个path执行一个函数详细见手册
 print('os.path.supports_unicode_filenames:',os.path.supports_unicode_filenames)     #设置是否支持unicode路径名
 
+shutil.copyfile('cursrcpath','curtargetpath')       #复制文件
