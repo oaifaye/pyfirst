@@ -12,16 +12,16 @@ import scipy.misc
 import tensorflow as tf
 
 # Output folder for the images.
-OUTPUT_DIR = 'output_lu/'
+OUTPUT_DIR = 'output_sheng/'
 # Style image to use.
-STYLE_IMAGE = 'images/lu_s.jpg'
+STYLE_IMAGE = 'images/style4.jpg'
 # Content image to use.
-CONTENT_IMAGE = 'images/lu.jpg'
+CONTENT_IMAGE = 'images/370.png'
 # Image dimensions constants.
 # IMAGE_WIDTH = 640
 # IMAGE_HEIGHT = 480
-IMAGE_WIDTH = 512
-IMAGE_HEIGHT = 768
+IMAGE_WIDTH = 1920
+IMAGE_HEIGHT = 1080
 COLOR_CHANNELS = 3
 
 ###############################################################################
@@ -30,10 +30,10 @@ COLOR_CHANNELS = 3
 # 设置随机噪声图像与内容图像的比率
 NOISE_RATIO = 0.6
 # 设置迭代次数
-ITERATIONS = 1000
+ITERATIONS = 2000
 # 设置内容图像与风格图像的权重
 alpha = 1
-beta = 500
+beta = 3000
 # 加载VGG-19 MODEL及设定均值
 VGG_Model = 'imagenet-vgg-verydeep-19.mat'
 MEAN_VALUES = np.array([123.68, 116.779, 103.939]).reshape((1, 1, 1, 3))
