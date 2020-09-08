@@ -49,5 +49,13 @@ print('numpy.random.choice():\n', np.random.choice((1,2,3,4,5),3))
 6.numpy.random.seed(None)
 设置相同的seed，每次生成的随机数相同。如果不设置seed，则每次会生成不同的随机数
 '''
-np.random.seed(2)
+#np.random.seed(2)
 print('np.random.seed-rand():',np.random.rand(2, 3))
+
+'''
+多项分布
+n:随机的轮数
+pvals:概率数组
+size:返回结果的个数
+'''
+print('np.random.multinomial():',np.random.multinomial(n=1,pvals=[0.1,0.2,0.5,0.2],size=30))

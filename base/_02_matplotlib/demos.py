@@ -113,4 +113,4 @@ def erci():
     plt.scatter(x, y)
     plt.show()
     
-erci()
+subplotMuch()

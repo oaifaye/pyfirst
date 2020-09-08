@@ -46,7 +46,6 @@ zheng = 2.5 * np.random.randn(2, 4) + 3
 print('zheng',zheng)
 
 x_data = np.linspace(-1, 1, 2000)
-print()
 
 print(9%8)
 
@@ -103,4 +102,9 @@ data8=[[[1,11],[2,22],[3,33]],[[4,44],[5,55],[6,66]]]
 print('data8[-1]:',data8[-1])
 
 #类型转换
-data8.astype(np.int32)
+np.asarray(data8).astype(np.int32)
+
+#逗号拼接
+a = [1,2,3]
+b = [4,5,6]
+print("逗号拼接",[a,b])

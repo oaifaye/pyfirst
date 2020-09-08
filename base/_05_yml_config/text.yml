@@ -1,0 +1,5 @@
+GPU_ID: 1000
+TRAIN:
+  DISPLAY: 10
+TEST:
+  HAS_RPN: True

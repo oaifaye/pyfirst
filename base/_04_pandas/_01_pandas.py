@@ -3,7 +3,7 @@ Created on 2019年1月21日
 
 https://www.jianshu.com/p/a77b0bc736f2
 '''
-
+import pandas as pd
 '''
 导入数据
 pd.read_csv(filename,sep)：从CSV文件导入数据
