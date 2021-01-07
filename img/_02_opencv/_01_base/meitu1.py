@@ -94,17 +94,21 @@ def WhiteBeauty(image,whi):
 
 
 if __name__ =="__main__":
-    filepath = 'data/nv1.jpg'
-    #原始图像
-    brightness = 1.5
-    contrast = 0.2
-    color=1.9
-    sharpness=0.1
-    BrightnessEnhancement(brightness)
-    ContrastEnhancement(contrast)
-    ColorEnhancement(color)
+    # filepath = 'data/nv1.jpg'
+    # #原始图像
+    # brightness = 1.5
+    # contrast = 0.2
+    # color=1.9
+    # sharpness=0.1
+    # BrightnessEnhancement(brightness)
+    # ContrastEnhancement(contrast)
+    # ColorEnhancement(color)
+    # SharpnessEnhancement(sharpness)
+    # whi = 1.2
+    # image =cv2.imread('../data/nv1.jpg')
+    # Filter(image)
+    # WhiteBeauty(image,whi)
+
+    filepath = '../data/nv.jpg'
+    sharpness = 3
     SharpnessEnhancement(sharpness)
-    whi = 1.2
-    image =cv2.imread('data/nv1.jpg')
-    Filter(image)
-    WhiteBeauty(image,whi)
