@@ -44,3 +44,5 @@ canvas_gb.paste(image_gb, (0, 0), image_gb)
 result_array = np.array(canvas_r) + np.array(canvas_gb)
 result = Image.fromarray(result_array)
 result.show()
+
+

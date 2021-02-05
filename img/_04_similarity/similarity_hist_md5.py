@@ -27,8 +27,9 @@ if __name__ == '__main__':
     dir_2_end = int(sys.argv[3])
 
     check_paths = []
-    check_root_path = r'/opt/10.20.31.124.pub.pic'
+    check_root_path = r'/opt/10.20.31.124/pic'
     save_hist_path = r'res_hist_1'
+    save_hist_path_90 = r'res_hist_1_90'
     save_MD5_path = r'res_md5_1'
     standard_path = r'dui'
 
@@ -51,6 +52,8 @@ if __name__ == '__main__':
 
     if not os.path.exists(save_hist_path):
         os.makedirs(save_hist_path)
+    if not os.path.exists(save_hist_path_90):
+        os.makedirs(save_hist_path_90)
     if not os.path.exists(save_MD5_path):
         os.makedirs(save_MD5_path)
 
@@ -85,7 +88,11 @@ if __name__ == '__main__':
                     if run_hist:
                         corrcuomean, minbc = similarity_util.check_one_img_hist(vis, duiHistArr, hist_size)
                         # print(os.path.join(fpathe, check_img_name), corrcuomean, minbc)
-                        if corrcuomean > hist_min_similar:
+                        if corrcuomean > 0.9:
+                            font, ext = os.path.splitext(check_img_name)[0], os.path.splitext(check_img_name)[1]
+                            corrcuomean = ('%.2f' % corrcuomean)
+                            cv2.imwrite(os.path.join(save_hist_path_90, font + "_" + str(corrcuomean) + ext), vis)
+                        elif corrcuomean > hist_min_similar:
                             font, ext = os.path.splitext(check_img_name)[0], os.path.splitext(check_img_name)[1]
                             corrcuomean = ('%.2f' % corrcuomean)
                             cv2.imwrite(os.path.join(save_hist_path, font+"_"+str(corrcuomean)+ext), vis)
