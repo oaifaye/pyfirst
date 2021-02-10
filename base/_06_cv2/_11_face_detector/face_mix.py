@@ -21,8 +21,8 @@ def shape_to_np(shape, dtype="int", point_count=68): # 将包含68个特征的�
 if __name__ == '__main__':
     # img_new = cv2.imread('face_mix/0016_01_1.png')
     # img = cv2.imread('face_mix/0016_01_5.png')
-    img = cv2.imread(r'C:\Users\Administrator\Desktop\zawu\20210202\img1\generated_images/z_00851_2.14_2.png')
-    img_new = cv2.imread(r'C:\Users\Administrator\Desktop\zawu\20210202\img1\generated_images/z_00851_2.14_-2.png')
+    img = cv2.imread(r'C:\Users\Administrator\Desktop\zawu\20210208/20210208123543.jpg')
+    img_new = cv2.imread(r'C:\Users\Administrator\Desktop\zawu\20210208/20210208123539.jpg')
     detector = dlib.get_frontal_face_detector()
     pointer = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
