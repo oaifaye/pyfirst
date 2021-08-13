@@ -11,6 +11,7 @@
 import dlib
 from PIL import Image, ImageDraw
 import numpy as np
+import time
 
 # 人脸识别 最普通的方式
 def face_detector():
@@ -47,4 +48,8 @@ def face_detector_cnn():
 
 if __name__ == '__main__':
     # face_detector()
-    face_detector_cnn()
+    t = time.time()
+    for i in range(100):
+        # face_detector_cnn()
+        face_detector()
+        print('time.time():', time.time()- t)

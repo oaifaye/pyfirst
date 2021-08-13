@@ -125,13 +125,13 @@ def fenxi_json():
 
 
 if __name__ == '__main__':
-    fenxi_json()
+    # fenxi_json()
 
 
 
 
-    # res = check_one('http://pic.app2020.tjyun.com/005/014/252/00501425273_eda6e5cd.png')
-    # print('res:', res)
+    res = check_one('https://img.alicdn.com/imgextra/i4/i2/T1CnA.FixaXXXXXXXX_!!0-item_pic.jpg')
+    print('res:', res)
 
     # encoding:utf-8
 
